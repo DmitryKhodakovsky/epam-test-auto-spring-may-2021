@@ -2,7 +2,7 @@
 <suite name="allTestsSuite">
   <test name="allTests">
     <packages>
-      <package name="ru.training.at.selenium.lesson4"/>
+      <package name="ru.training.at.selenium.lesson4.tests"/>
     </packages>
   </test>
 </suite>
