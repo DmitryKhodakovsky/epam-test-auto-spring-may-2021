@@ -28,6 +28,7 @@
         <maven.checkstyle.version>3.1.2</maven.checkstyle.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.surefire.version>3.0.0-M5</maven.surefire.version>
+        <cucumber-testng.version>6.10.4</cucumber-testng.version>
     </properties>
 
     <dependencies>
@@ -74,6 +75,19 @@
             <version>${allure.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber-testng.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber-testng.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -181,6 +195,16 @@
             </activation>
             <properties>
                 <testng.suite.file>${testng.configs.path}/Selenium_lesson4_allTests.xml</testng.suite.file>
+            </properties>
+        </profile>
+        <profile>
+            <id>Selenium_lesson5_allTests</id>
+            <activation>
+                <!-- If no profile is selected explicitly, then this profile is activated -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <testng.suite.file>${testng.configs.path}/Selenium_lesson5_allTests.xml</testng.suite.file>
             </properties>
         </profile>
     </profiles>
